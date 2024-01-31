@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doc</title>
+        <script>
+            
+            const age = '17'
+            const pays = 'France'
+
+            // Comparaison : ==, ===, !=, !==, &&, ||
+
+            // Simple test d'égalité : juste la valeure
+            // --> Affichera VRAI
+            if (age == 17) {
+                console.log('Vrai')
+            } else {
+                console.log('Faux')
+            }
+
+            // Egalité complète : test la valeure ET le type
+            // --> Affichera FAUX
+            if (age === 17) {
+                console.log('Vrai')
+            } else {
+                console.log('Faux')
+            }
+    
+            if (pays == 'France' || age == 17) // Une sele condition validée suffit
+            if (pays == 'France' && age == 17) // Les deux doivent être validées
+            
+            // BREAK IMPORTANT, sinon il enchaine les autres conditions
+            switch (pays) {
+                case 'FR':
+                    console.log('Je suis en france')
+                    break
+                case 'US':
+                    console.log('Je suis aux states')
+                    break
+                default:
+                    console.log('Je suis dans un pays')
+                    break
+            }
+            
+            // ${a} permet d'afficher la variable a dans une message de console
+            
+            const a = prompt('Entrez un premier nombre')
+            const b = prompt('Entrez un deuxième nombre')
+            const result = a * b
+            let signe
+            if (isNaN(result)) {        // Test si c'est un nombre
+                console.log(`Opération impossible: ${a}x${b}`) // Si s'en est pas un on ffiche ça
+            } else {
+                if (result > 0) {
+                    signe = 'positif'
+                } else {
+                    signe = 'negatif'
+                }
+                console.log(`${a}x${b}=${result} est ${signe}`)
+            }
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

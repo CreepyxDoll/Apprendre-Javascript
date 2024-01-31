@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doc</title>
+        <script>
+             // word = abcd (par exemple)
+            function isPalindrome (word) {
+                const letters = word.split('') //On créer un tableau qui contient chaque lettre du mot mais ils se retrouvent dans l'ordre décroissant -> [d, c, b, a]
+                letters.reverse() // On inverse les lettres du tableau (la dernière devient lapremière, etc...) -> [a, b, c, d]
+                const reversedWord = letters.join('') // On créer une variable qui lie les lettres du tableau en une seule -> abcd
+                return word.toUpperCase() === reversedWord.toUpperCase()
+            }
+
+            const words = {
+                kayak: true,
+                SOS: true,
+                Bonjour: false
+            }
+            
+            for (let word in words) {
+                if (isPalindrome(word) === words[word]) {
+                    console.log(`Oui`)
+                }
+            }
+
+
+
+    
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
